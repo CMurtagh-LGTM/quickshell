@@ -38,7 +38,7 @@ QString ConnectionFailReason::toString(ConnectionFailReason::Enum reason) {
 	switch (reason) {
 	case Unknown: return QStringLiteral("Unknown");
 	case NoSecrets: return QStringLiteral("Secrets were required but not provided");
-	case WifiClientDisconnected: return QStringLiteral("Wi-Fi supplicant diconnected");
+	case WifiClientDisconnected: return QStringLiteral("Wi-Fi supplicant disconnected");
 	case WifiClientFailed: return QStringLiteral("Wi-Fi supplicant failed");
 	case WifiAuthTimeout: return QStringLiteral("Wi-Fi connection took too long to authenticate");
 	case WifiNetworkLost: return QStringLiteral("Wi-Fi network could not be found");
@@ -50,6 +50,7 @@ QString DeviceType::toString(DeviceType::Enum type) {
 	switch (type) {
 	case None: return QStringLiteral("None");
 	case Wifi: return QStringLiteral("Wifi");
+	case Wired: return QStringLiteral("Wired");
 	default: return QStringLiteral("Unknown");
 	}
 }
